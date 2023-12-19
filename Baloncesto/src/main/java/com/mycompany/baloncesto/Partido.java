@@ -9,6 +9,7 @@ package com.mycompany.baloncesto;
  * @author user
  */
 public abstract class Partido implements Operaciones{
+    
     private String equipoLocal;
     private String equipoVisitante;
     private int cestasLocal;
@@ -16,6 +17,8 @@ public abstract class Partido implements Operaciones{
     private boolean finalizado;
     private String fechaPartido;
     
+    
+    // PARAMETERIZED CONSTRUCTOR
      public Partido(String equipoLocal, String equipoVisitante,String fechaPartido) {
         this.equipoLocal = equipoLocal;
         this.equipoVisitante = equipoVisitante;
@@ -24,60 +27,66 @@ public abstract class Partido implements Operaciones{
         this.finalizado = false;
         this.fechaPartido = fechaPartido;
     }
+    
      
-    public String getEquipoLocal() {
-        return equipoLocal;
-    }
-
+    // SET
     public void setEquipoLocal(String equipoLocal) {
         this.equipoLocal = equipoLocal;
+    } 
+    
+    public void setEquipoVisitante(String equipoVisitante) {
+        this.equipoVisitante = equipoVisitante;
+    }
+    
+    public void setCestasLocal(int cestasLocal) {
+        this.cestasLocal = cestasLocal;
+    }
+    
+    public void setCestasVisitante(int cestasVisitante) {
+        this.cestasVisitante = cestasVisitante;
+    }
+    
+    public void setFinalizado(boolean finalizado) {
+        this.finalizado = finalizado;
+    }
+    
+    public void setFechaPartido(String fechaPartido) {
+        this.fechaPartido = fechaPartido;
+    }
+    
+    
+    // GET
+    public String getEquipoLocal() {
+        return equipoLocal;
     }
 
     public String getEquipoVisitante() {
         return equipoVisitante;
     }
 
-    public void setEquipoVisitante(String equipoVisitante) {
-        this.equipoVisitante = equipoVisitante;
-    }
-
     public int getCestasLocal() {
         return cestasLocal;
-    }
-
-    public void setCestasLocal(int cestasLocal) {
-        this.cestasLocal = cestasLocal;
     }
 
     public int getCestasVisitante() {
         return cestasVisitante;
     }
 
-    public void setCestasVisitante(int cestasVisitante) {
-        this.cestasVisitante = cestasVisitante;
+    public String getFechaPartido() {
+        return fechaPartido;
     }
 
     public boolean isFinalizado() {
         return finalizado;
     }
 
-    public void setFinalizado(boolean finalizado) {
-        this.finalizado = finalizado;
-    }
-
-    public String getFechaPartido() {
-        return fechaPartido;
-    }
-
-    public void setFechaPartido(String fechaPartido) {
-        this.fechaPartido = fechaPartido;
-    }
-    
+    // ABSTRACT METHOD
     public abstract String mostrarPartido();
     
     public void obtenerResultado(){
         System.out.println("Pendiente");
     }
+    
 }
 
 

@@ -11,38 +11,29 @@ package com.mycompany.baloncesto;
 public class PartidoPlayOff extends Partido {
     
     private String ronda;
-
+    
+    // PARAMETERIZED CONSTRUCTOR
     public PartidoPlayOff(String equipoLocal, String equipoVisitante, String fechaPartido, String ronda) {
         super(equipoLocal, equipoVisitante, fechaPartido);
         this.ronda = ronda;
     }
     
-    @Override
-    public String mostrarPartido() {
-         return "Partido{" + 
-                "equipoLocal=" + super.getEquipoLocal() + 
-                ", equipoVisitante=" + super.getEquipoVisitante() + 
-                ", cestasLocal=" + super.getCestasLocal() + 
-                ", cestasVisitante=" + super.getCestasVisitante() + 
-                ", finalizado=" + super.isFinalizado() + 
-                ", ronda=" + this.ronda + 
-                ", fechaPartido=" + super.getFechaPartido() + '}';
-    }
-
-    public String getRonda() {
-        return ronda;
-    }
-
+    // SET
     public void setRonda(String ronda) {
         this.ronda = ronda;
     }
-
+    
+    // GET
+    public String getRonda() {
+        return ronda;
+    }
+    
+    // INTERFACES
     @Override
     public String obtenerGanador() {
          if (super.getCestasLocal() > super.getCestasVisitante() && super.isFinalizado()){
             return super.getEquipoLocal();
-        }else if(super.getCestasLocal() < super.getCestasVisitante() 
-                && super.isFinalizado()){
+        }else if(super.getCestasLocal() < super.getCestasVisitante() && super.isFinalizado()){
             return super.getEquipoVisitante();
         }else{
             return "Partido no finalizado";
@@ -58,5 +49,23 @@ public class PartidoPlayOff extends Partido {
             return true;
         }
     }
+    
+    // ABSTRACT METHOD7
+    @Override
+    public String mostrarPartido() {
+         return "Partido{" + 
+                "equipoLocal=" + super.getEquipoLocal() + 
+                ", equipoVisitante=" + super.getEquipoVisitante() + 
+                ", cestasLocal=" + super.getCestasLocal() + 
+                ", cestasVisitante=" + super.getCestasVisitante() + 
+                ", finalizado=" + super.isFinalizado() + 
+                ", ronda=" + this.ronda + 
+                ", fechaPartido=" + super.getFechaPartido() + '}';
+    }
+    
+    
+    
+
+    
 
 }
