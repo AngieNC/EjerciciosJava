@@ -4,17 +4,13 @@
  */
 package com.mycompany.alquiler;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author user
  */
-public class Tienda {
+public interface OperadoresPelis {
+
+    public String mostrarInfo();
+    public double calcularPrecio();
     
-        List<PelisChill> peliculas = new ArrayList<PelisChill>();
-        List<Clientes> clientes = new ArrayList<Clientes>();
-        
-        
 }

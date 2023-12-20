@@ -8,8 +8,8 @@ package com.mycompany.alquiler;
  *
  * @author user
  */
-public abstract class PelisChill extends Tienda {
-    
+public  class PelisChill extends Tienda implements OperadoresPelis {
+
     private int id;
     private String titulo;
     private String director;
@@ -26,28 +26,28 @@ public abstract class PelisChill extends Tienda {
         this.precio = precio;
         this.peliEspecial = peliEspecial;
     }
-    
+
     // SET
     public void setId(int id) {
         this.id = id;
     }
-    
+
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-    
+
     public void setDirector(String director) {
         this.director = director;
     }
-    
+
     public void setGenero(String genero) {
         this.genero = genero;
     }
-    
+
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-    
+
     public void setPeliEspecial(boolean peliEspecial) {
         this.peliEspecial = peliEspecial;
     }
@@ -55,8 +55,7 @@ public abstract class PelisChill extends Tienda {
     public void setDescuento(double descuento) {
         this.descuento = descuento;
     }
-    
-    
+
     // GET
     public int getId() {
         return id;
@@ -78,15 +77,22 @@ public abstract class PelisChill extends Tienda {
         return precio;
     }
 
-    public double getDescuento() {
-        return descuento;
-    }
-   
     public boolean isPeliEspecial() {
         return peliEspecial;
     }
-    
-    // ABSTRACT METHOD
-    public abstract String mostrarPelis();
+
+    @Override
+    public String mostrarInfo() {
+        return "Información sobre la película " + titulo + "  \n Tiene como id:  " + id + "\n Su director es: " + director + "\n Su genero es: " + genero + "\n Su precio de alquiler es: " + precio + "\n Es especial: " + peliEspecial; 
+    }
+
+    @Override
+    public double calcularPrecio() {
+        if (peliEspecial == true){
+            return 565.065;
+        } else{
+            return 45.32;
+        }
+    }
 
 }
