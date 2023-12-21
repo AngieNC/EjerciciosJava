@@ -13,8 +13,8 @@ import java.util.List;
  */
 public class Tienda {
     
-        List<PelisChill> peliculas = new ArrayList<PelisChill>();
-        List<Clientes> clientes = new ArrayList<Clientes>();
+    List<PelisChill> peliculas = new ArrayList<PelisChill>();
+    List<Clientes> clientes = new ArrayList<Clientes>();
         
         
 }

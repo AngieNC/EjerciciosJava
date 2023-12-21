@@ -8,7 +8,7 @@ package com.mycompany.alquiler;
  *
  * @author user
  */
-public class Clientes extends Tienda {
+public class Clientes {
 
     private String nombre;
     private String correo;

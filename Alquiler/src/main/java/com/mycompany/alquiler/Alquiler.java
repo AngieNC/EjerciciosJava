@@ -1,11 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
+
 
 package com.mycompany.alquiler;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
@@ -13,8 +8,34 @@ import java.util.List;
  */
 public class Alquiler {
 
-    public static void main(String[] args) {
-        
-        //x
+    private Clientes cliente;
+    private PelisChill pelicula;
+
+       
+    public Alquiler(Clientes cliente, PelisChill pelicula) {
+        this.cliente = cliente;
+        this.pelicula = pelicula;
     }
+    
+    // GET
+    public Clientes getCliente() {
+        return cliente;
+    }
+    
+    public PelisChill getPelicula() {
+        return pelicula;
+    }
+    
+    
+    // SET
+    public void setCliente(Clientes cliente) {
+        this.cliente = cliente;
+    }
+
+    public void setPelicula(PelisChill pelicula) {
+        this.pelicula = pelicula;
+    }
+       
+    
+    
 }

@@ -8,15 +8,14 @@ package com.mycompany.alquiler;
  *
  * @author user
  */
-public  class PelisChill extends Tienda implements OperadoresPelis {
+public class PelisChill implements OperadoresPelis {
 
     private int id;
     private String titulo;
     private String director;
     private String genero;
     private double precio;
-    private boolean peliEspecial;
-    private double descuento;
+    
 
     public PelisChill(int id, String titulo, String director, String genero, double precio, boolean peliEspecial) {
         this.id = id;
@@ -24,7 +23,6 @@ public  class PelisChill extends Tienda implements OperadoresPelis {
         this.director = director;
         this.genero = genero;
         this.precio = precio;
-        this.peliEspecial = peliEspecial;
     }
 
     // SET
@@ -48,14 +46,6 @@ public  class PelisChill extends Tienda implements OperadoresPelis {
         this.precio = precio;
     }
 
-    public void setPeliEspecial(boolean peliEspecial) {
-        this.peliEspecial = peliEspecial;
-    }
-    
-    public void setDescuento(double descuento) {
-        this.descuento = descuento;
-    }
-
     // GET
     public int getId() {
         return id;
@@ -77,22 +67,16 @@ public  class PelisChill extends Tienda implements OperadoresPelis {
         return precio;
     }
 
-    public boolean isPeliEspecial() {
-        return peliEspecial;
-    }
 
     @Override
     public String mostrarInfo() {
-        return "Información sobre la película " + titulo + "  \n Tiene como id:  " + id + "\n Su director es: " + director + "\n Su genero es: " + genero + "\n Su precio de alquiler es: " + precio + "\n Es especial: " + peliEspecial; 
+        return "Información sobre la película " + titulo + "  \n Tiene como id:  " + id + "\n Su director es: " + director + "\n Su genero es: " + genero + "\n Su precio de alquiler es: " + precio + "\n Es especial: "; 
     }
-
+    
+    
     @Override
     public double calcularPrecio() {
-        if (peliEspecial == true){
-            return 565.065;
-        } else{
-            return 45.32;
-        }
+        return 54.128; //Pendiente
     }
-
+    
 }
